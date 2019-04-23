@@ -3,7 +3,7 @@
     <section class="intro">
       <h1>Get the latest tech news !</h1>
     </section>
-    <PostList />
+    <PostList :posts="loadedPosts"/>
   </div>
 </template>
 
@@ -13,6 +13,52 @@ import PostList from '@/components/Posts/PostList'
 export default {
   components: {
     PostList
+  },
+  asyncData(context, callback) {
+    console.log(context)
+      setTimeout( () => { 
+        callback(null, {
+        loadedPosts: [
+        { id: '1', 
+        title: 'Are consoles dead ?', 
+        previewText: 'Stadia, cloud gaming. Is this the consoles requiem ?',
+        thumbnail: 'https://static.techspot.com/images2/news/bigimage/2018/07/2018-07-10-image-35.jpg'
+        },
+        { id: '2', 
+        title: 'Smartphone or smartpeople, which to choose ?', 
+        previewText: 'Do I really need my brain to think ?',
+        thumbnail: 'https://static.techspot.com/images2/news/bigimage/2018/07/2018-07-10-image-35.jpg'
+        },
+        { id: '3', 
+        title: 'GAFAM or BATX ?', 
+        previewText: 'Global technological warfare, where is Europe and where is France ?',
+        thumbnail: 'https://static.techspot.com/images2/news/bigimage/2018/07/2018-07-10-image-35.jpg'
+        },
+        { id: '4', 
+        title: 'Artificial intelligence vs idiocracy, the Big Game ?', 
+        previewText: 'whos gonna win, stupidity or greater stupidity ?',
+        thumbnail: 'https://static.techspot.com/images2/news/bigimage/2018/07/2018-07-10-image-35.jpg'
+        },
+        { id: '5', 
+        title: 'Dassault systemes, the new google or the new Apple ?', 
+        previewText: 'which company gonna take it all ?',
+        thumbnail: 'https://static.techspot.com/images2/news/bigimage/2018/07/2018-07-10-image-35.jpg'
+        },
+        { id: '6', 
+        title: 'What a beautifull title we have, isnt it lovely !?', 
+        previewText: 'And an absolutly pretty subtitle the we have !',
+        thumbnail: 'https://static.techspot.com/images2/news/bigimage/2018/07/2018-07-10-image-35.jpg'
+        }
+      ]  
+      });     
+   } , 1500);
+  },
+  // data() {
+  //   return {
+  //     loadedPosts: []
+  //   };
+  // },
+  created() {
   }
 }
 </script>
@@ -27,7 +73,6 @@ export default {
   background-position: center;
   background-size: cover;
 }
-
 .intro h1 {
   position: absolute;
   top: 10%;
@@ -42,7 +87,6 @@ export default {
   box-sizing: border-box;
   border: 1px solid black;
 }
-
 @media (min-width: 768px) {
   .intro h1 {
     font-size: 2rem;
