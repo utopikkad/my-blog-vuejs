@@ -17,13 +17,25 @@
         :is-admin="isAdmin"
         thumbnail="https://static.techspot.com/images2/news/bigimage/2018/07/2018-07-10-image-35.jpg"
         title="GAFAM or BATX ?"
-        previewText="technological warfare, where is Europe ?"/>
+        previewText="Global technological warfare, where is Europe and where is France ?"/>
         <PostPreview 
         id="4"
         :is-admin="isAdmin"
         thumbnail="https://static.techspot.com/images2/news/bigimage/2018/07/2018-07-10-image-35.jpg"
         title="Smartphone or smartpeople ?"
         previewText="Do I really need my brain to think ?"/>
+        <PostPreview 
+        id="5"
+        :is-admin="isAdmin"
+        thumbnail="https://static.techspot.com/images2/news/bigimage/2018/07/2018-07-10-image-35.jpg"
+        title="Artifcial intelligence vs idiocracy ?"
+        previewText="who's gonna win ?"/>
+           <PostPreview 
+        id="6"
+        :is-admin="isAdmin"
+        thumbnail="https://static.techspot.com/images2/news/bigimage/2018/07/2018-07-10-image-35.jpg"
+        title="Dassault systemes, the new google ?"
+        previewText="who's gonna win ?"/>
     </section>
 </template>
 
